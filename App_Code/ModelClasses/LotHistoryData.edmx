@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="csc550_fall2016_akoltunModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="ST_Lot_History_Data">
+          <Key>
+            <PropertyRef Name="Lot_Number" />
+            <PropertyRef Name="Months_Recorded" />
+            <PropertyRef Name="Month" />
+          </Key>
+          <Property Name="Lot_Number" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="Months_Recorded" Type="int" Nullable="false" />
+          <Property Name="Month" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="Num_eggs_on_hand" Type="int" />
+          <Property Name="Eggs_on_hand_weight" Type="decimal" Precision="10" Scale="2" />
+          <Property Name="Fish_per_pound" Type="decimal" Precision="10" Scale="2" />
+          <Property Name="Num_Mortalities" Type="int" />
+          <Property Name="Inv_adj_num" Type="int" />
+          <Property Name="Eggs_spawned_num" Type="int" />
+          <Property Name="Eggs_pick_off_num" Type="int" />
+          <Property Name="Eye_up_hatch" Type="decimal" Precision="10" Scale="2" />
+          <Property Name="Num_eggs_trans_in" Type="int" />
+          <Property Name="Eggs_trans_in_weight" Type="decimal" Precision="10" Scale="2" />
+          <Property Name="Num_eggs_trans_out" Type="decimal" Precision="10" Scale="2" />
+          <Property Name="Eggs_trans_out_weight" Type="decimal" Precision="10" Scale="2" />
+          <Property Name="Fish_stocked_num" Type="int" />
+          <Property Name="Fish_stocked_weight" Type="int" />
+          <Property Name="Weight_Gain_per_month" Type="decimal" Precision="10" Scale="2" />
+          <Property Name="Weight_Gain_to_date" Type="decimal" Precision="10" Scale="2" />
+          <Property Name="Feed_Type_A" Type="nvarchar" MaxLength="255" />
+          <Property Name="Feed_Type_B" Type="nvarchar" MaxLength="255" />
+          <Property Name="Amount_Fed_A" Type="decimal" Precision="10" Scale="2" />
+          <Property Name="Amount_Fed_B" Type="decimal" Precision="10" Scale="2" />
+          <Property Name="Unit_Price_Fed_A" Type="decimal" Precision="10" Scale="4" />
+          <Property Name="Unit_Price_Fed_B" Type="decimal" Precision="10" Scale="4" />
+          <Property Name="Food_fed_per_month" Type="decimal" Precision="10" Scale="2" />
+          <Property Name="Food_fed_to_date" Type="decimal" Precision="10" Scale="2" />
+          <Property Name="Feed_cost_per_month" Type="decimal" Precision="10" Scale="4" />
+          <Property Name="Feed_cost_to_date" Type="decimal" Precision="10" Scale="4" />
+          <Property Name="Conversion_rate_per_month" Type="decimal" Precision="20" Scale="8" />
+          <Property Name="Conversion_rate_to_date" Type="decimal" Precision="20" Scale="8" />
+          <Property Name="Length_on_last_day_of_month" Type="decimal" Precision="6" Scale="4" />
+          <Property Name="Inc_in_length_during_month" Type="decimal" Precision="6" Scale="4" />
+          <Property Name="Num_of_days_feed_per_month" Type="int" />
+          <Property Name="Num_of_days_feed_cum" Type="int" />
+          <Property Name="Ave_daily_inc_month" Type="decimal" Precision="20" Scale="4" />
+          <Property Name="Ave_daily_inc_cum" Type="decimal" Precision="20" Scale="4" />
+          <Property Name="Condition_factor" Type="decimal" Precision="20" Scale="8" />
+          <Property Name="Comments" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityContainer Name="csc550_fall2016_akoltunModelStoreContainer">
+          <EntitySet Name="ST_Lot_History_Data" EntityType="Self.ST_Lot_History_Data" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="csc550_fall2016_akoltunModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="ST_Lot_History_Data">
+          <Key>
+            <PropertyRef Name="Lot_Number" />
+            <PropertyRef Name="Months_Recorded" />
+            <PropertyRef Name="Month" />
+          </Key>
+          <Property Name="Lot_Number" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Months_Recorded" Type="Int32" Nullable="false" />
+          <Property Name="Month" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Num_eggs_on_hand" Type="Int32" />
+          <Property Name="Eggs_on_hand_weight" Type="Decimal" Precision="10" Scale="2" />
+          <Property Name="Fish_per_pound" Type="Decimal" Precision="10" Scale="2" />
+          <Property Name="Num_Mortalities" Type="Int32" />
+          <Property Name="Inv_adj_num" Type="Int32" />
+          <Property Name="Eggs_spawned_num" Type="Int32" />
+          <Property Name="Eggs_pick_off_num" Type="Int32" />
+          <Property Name="Eye_up_hatch" Type="Decimal" Precision="10" Scale="2" />
+          <Property Name="Num_eggs_trans_in" Type="Int32" />
+          <Property Name="Eggs_trans_in_weight" Type="Decimal" Precision="10" Scale="2" />
+          <Property Name="Num_eggs_trans_out" Type="Decimal" Precision="10" Scale="2" />
+          <Property Name="Eggs_trans_out_weight" Type="Decimal" Precision="10" Scale="2" />
+          <Property Name="Fish_stocked_num" Type="Int32" />
+          <Property Name="Fish_stocked_weight" Type="Int32" />
+          <Property Name="Weight_Gain_per_month" Type="Decimal" Precision="10" Scale="2" />
+          <Property Name="Weight_Gain_to_date" Type="Decimal" Precision="10" Scale="2" />
+          <Property Name="Feed_Type_A" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Feed_Type_B" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Amount_Fed_A" Type="Decimal" Precision="10" Scale="2" />
+          <Property Name="Amount_Fed_B" Type="Decimal" Precision="10" Scale="2" />
+          <Property Name="Unit_Price_Fed_A" Type="Decimal" Precision="10" Scale="4" />
+          <Property Name="Unit_Price_Fed_B" Type="Decimal" Precision="10" Scale="4" />
+          <Property Name="Food_fed_per_month" Type="Decimal" Precision="10" Scale="2" />
+          <Property Name="Food_fed_to_date" Type="Decimal" Precision="10" Scale="2" />
+          <Property Name="Feed_cost_per_month" Type="Decimal" Precision="10" Scale="4" />
+          <Property Name="Feed_cost_to_date" Type="Decimal" Precision="10" Scale="4" />
+          <Property Name="Conversion_rate_per_month" Type="Decimal" Precision="20" Scale="8" />
+          <Property Name="Conversion_rate_to_date" Type="Decimal" Precision="20" Scale="8" />
+          <Property Name="Length_on_last_day_of_month" Type="Decimal" Precision="6" Scale="4" />
+          <Property Name="Inc_in_length_during_month" Type="Decimal" Precision="6" Scale="4" />
+          <Property Name="Num_of_days_feed_per_month" Type="Int32" />
+          <Property Name="Num_of_days_feed_cum" Type="Int32" />
+          <Property Name="Ave_daily_inc_month" Type="Decimal" Precision="20" Scale="4" />
+          <Property Name="Ave_daily_inc_cum" Type="Decimal" Precision="20" Scale="4" />
+          <Property Name="Condition_factor" Type="Decimal" Precision="20" Scale="8" />
+          <Property Name="Comments" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="LotHistoryDataContext" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="ST_Lot_History_Data" EntityType="Self.ST_Lot_History_Data" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="csc550_fall2016_akoltunModelStoreContainer" CdmEntityContainer="LotHistoryDataContext">
+          <EntitySetMapping Name="ST_Lot_History_Data">
+            <EntityTypeMapping TypeName="csc550_fall2016_akoltunModel.ST_Lot_History_Data">
+              <MappingFragment StoreEntitySet="ST_Lot_History_Data">
+                <ScalarProperty Name="Lot_Number" ColumnName="Lot_Number" />
+                <ScalarProperty Name="Months_Recorded" ColumnName="Months_Recorded" />
+                <ScalarProperty Name="Month" ColumnName="Month" />
+                <ScalarProperty Name="Num_eggs_on_hand" ColumnName="Num_eggs_on_hand" />
+                <ScalarProperty Name="Eggs_on_hand_weight" ColumnName="Eggs_on_hand_weight" />
+                <ScalarProperty Name="Fish_per_pound" ColumnName="Fish_per_pound" />
+                <ScalarProperty Name="Num_Mortalities" ColumnName="Num_Mortalities" />
+                <ScalarProperty Name="Inv_adj_num" ColumnName="Inv_adj_num" />
+                <ScalarProperty Name="Eggs_spawned_num" ColumnName="Eggs_spawned_num" />
+                <ScalarProperty Name="Eggs_pick_off_num" ColumnName="Eggs_pick_off_num" />
+                <ScalarProperty Name="Eye_up_hatch" ColumnName="Eye_up_hatch" />
+                <ScalarProperty Name="Num_eggs_trans_in" ColumnName="Num_eggs_trans_in" />
+                <ScalarProperty Name="Eggs_trans_in_weight" ColumnName="Eggs_trans_in_weight" />
+                <ScalarProperty Name="Num_eggs_trans_out" ColumnName="Num_eggs_trans_out" />
+                <ScalarProperty Name="Eggs_trans_out_weight" ColumnName="Eggs_trans_out_weight" />
+                <ScalarProperty Name="Fish_stocked_num" ColumnName="Fish_stocked_num" />
+                <ScalarProperty Name="Fish_stocked_weight" ColumnName="Fish_stocked_weight" />
+                <ScalarProperty Name="Weight_Gain_per_month" ColumnName="Weight_Gain_per_month" />
+                <ScalarProperty Name="Weight_Gain_to_date" ColumnName="Weight_Gain_to_date" />
+                <ScalarProperty Name="Feed_Type_A" ColumnName="Feed_Type_A" />
+                <ScalarProperty Name="Feed_Type_B" ColumnName="Feed_Type_B" />
+                <ScalarProperty Name="Amount_Fed_A" ColumnName="Amount_Fed_A" />
+                <ScalarProperty Name="Amount_Fed_B" ColumnName="Amount_Fed_B" />
+                <ScalarProperty Name="Unit_Price_Fed_A" ColumnName="Unit_Price_Fed_A" />
+                <ScalarProperty Name="Unit_Price_Fed_B" ColumnName="Unit_Price_Fed_B" />
+                <ScalarProperty Name="Food_fed_per_month" ColumnName="Food_fed_per_month" />
+                <ScalarProperty Name="Food_fed_to_date" ColumnName="Food_fed_to_date" />
+                <ScalarProperty Name="Feed_cost_per_month" ColumnName="Feed_cost_per_month" />
+                <ScalarProperty Name="Feed_cost_to_date" ColumnName="Feed_cost_to_date" />
+                <ScalarProperty Name="Conversion_rate_per_month" ColumnName="Conversion_rate_per_month" />
+                <ScalarProperty Name="Conversion_rate_to_date" ColumnName="Conversion_rate_to_date" />
+                <ScalarProperty Name="Length_on_last_day_of_month" ColumnName="Length_on_last_day_of_month" />
+                <ScalarProperty Name="Inc_in_length_during_month" ColumnName="Inc_in_length_during_month" />
+                <ScalarProperty Name="Num_of_days_feed_per_month" ColumnName="Num_of_days_feed_per_month" />
+                <ScalarProperty Name="Num_of_days_feed_cum" ColumnName="Num_of_days_feed_cum" />
+                <ScalarProperty Name="Ave_daily_inc_month" ColumnName="Ave_daily_inc_month" />
+                <ScalarProperty Name="Ave_daily_inc_cum" ColumnName="Ave_daily_inc_cum" />
+                <ScalarProperty Name="Condition_factor" ColumnName="Condition_factor" />
+                <ScalarProperty Name="Comments" ColumnName="Comments" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
